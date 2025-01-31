@@ -5,7 +5,7 @@ Feature: Buscar usuários
     Then O código de status da resposta deve ser 200
     
 Scenario: Verifica listagem de usuários de acordo com o ID informado
-    Given Eu faço uma requisição GET para "/usuarios/y49yS8Oi8ysCQRFA"
+    Given Eu faço uma requisição GET para "/usuarios?_id=y49yS8Oi8ysCQRFA"
     Then O código de status da resposta deve ser 200
 
 Scenario: Verifica se a API informa que não há usuários quando o usuário não for localizado

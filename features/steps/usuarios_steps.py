@@ -1,22 +1,25 @@
-from behave import given, then, when
-from requests import Session
+from behave import given, then
+import requests
 
-@given('Eu faço uma requisição GET para "{endpoint}"')
+BASE_URL = "https://serverest.dev"
+
+@given(u'Eu faço uma requisição GET para "{endpoint}"')
 def step_impl(context, endpoint):
-    context.session = Session()
-    context.base_url = "https://serverest.dev"
-    context.response = context.session.get(context.base_url + endpoint)
+    context.response = requests.get(f"{BASE_URL}{endpoint}")
 
-@then('O código de status da resposta deve ser {status_code}')
+@then(u'O código de status da resposta deve ser {status_code}')
 def step_impl(context, status_code):
-    assert context.response.status_code == int(status_code), f"Esperado {status_code}, mas obteve {context.response.status_code}"
+    assert context.response.status_code == int(status_code), \
+        f"Esperado {status_code}, mas obteve {context.response.status_code}"
 
-@then('O campo "{field}" deve ser {value}')
+@then(u'O campo "{field}" deve ser {value}')
 def step_impl(context, field, value):
     response_json = context.response.json()
-    assert str(response_json.get(field)) == value, f"Esperado {value}, mas obteve {response_json.get(field)}"
+    assert str(response_json.get(field)) == value, \
+        f"Esperado {value}, mas obteve {response_json.get(field)}"
 
-@then('O campo "{field}" deve estar vazio')
+@then(u'O campo "{field}" deve estar vazio')
 def step_impl(context, field):
     response_json = context.response.json()
-    assert not response_json.get(field), f"Esperado campo {field} vazio, mas obteve {response_json.get(field)}"
+    assert not response_json.get(field), \
+        f"Esperado campo {field} vazio, mas obteve {response_json.get(field)}"
