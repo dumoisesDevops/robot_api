@@ -76,10 +76,20 @@ pip freeze > requirements.txt
 
 ## 👐 Passo 4: Executar os Testes
 
-Para rodar os testes, execute:
+Os testes foram elaborados em duas abordagens:
+Cenários Diretos
+Para executar esses cenários, utilize o comando:
 
-```sh
-robot -d results tests/api_tests.robot
+robot -d results api-tests\tests\api_ServeRest.robot
+
+Este comando já está configurado para gerar relatórios na pasta results.
+
+Cenários em BDD (Behavior-Driven Development)
+
+Para rodar esses cenários, basta inserir o comando:
+
+
+Este comando executará os testes definidos na estrutura BDD.
 ```
 
 > 🔹 O parâmetro `-d results` salva os logs e relatórios na pasta `results/`.
