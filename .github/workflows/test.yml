@@ -1,4 +1,4 @@
-name: Run Robot Framework Tests
+name: Run Robot Framework and Behave Tests
 
 on:
   push:
@@ -24,14 +24,18 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install robotframework
+          pip install robotframework behave
 
       - name: Run Robot Framework tests
         run: |
           robot --outputdir results tests/
 
+      - name: Run Behave BDD tests
+        run: |
+          behave tests/
+
       - name: Upload test reports as artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: robot-test-reports
+          name: test-reports
           path: results/
