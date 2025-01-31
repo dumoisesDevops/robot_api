@@ -11,8 +11,8 @@ python -m venv venv
 # Ativar no Linux/macOS
 source venv/bin/activate  
 
-# Ativar no Windows
-venv\Scripts\activate  
+# Ativar no W
+venv\Scripts\activat
 ```
 
 ---
