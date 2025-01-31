@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.12.1 on win32)" generated="2025-01-31T11:38:17.824825" rpa="false" schemaversion="5">
+<suite id="s1" name="api ServeRest" source="C:\Users\User\Desktop\ProjetosEstudos\robot_api\api-tests\tests\api_ServeRest.robot">
+<test id="s1-t1" name="Teste de GET - Buscar usuarios" line="8">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-01-31T11:38:18.204827" level="INFO">Creating Session using : alias=API, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>API</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-01-31T11:38:18.204827" elapsed="0.001031"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-01-31T11:38:19.448705" level="INFO">GET Request : url=https://serverest.dev/usuarios 
+ path_url=/usuarios 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-01-31T11:38:19.448705" level="INFO">GET Response : url=https://serverest.dev/usuarios 
+ status=200, reason=OK 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'X-Cloud-Trace-Context': '2a3e9b64e69a25619e416705d7205c1d', 'Date': 'Fri, 31 Jan 2025 14:38:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '624399'} 
+ body={
+    "quantidade": 2803,
+    "usuarios": [
+        {
+            "nome": "Usuário de Teste",
+            "email": "user1738239866375@testing.com",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "01puTcjjcSvv6Kpt"
+        },
+        {
+            "nome": "Emily Predovic",
+            "email": "Sandra_Keebler@hotmail.com",
+            "password": "KLN2F4P4yV4zb1U",
+            "administrador": "true",
+            "_id": "02Y50L1t4qg5GuMY"
+        },
+        {
+            "nome": "Márcia Martins",
+            "email": "Lorenzo69@live.com",
+            "password": "pnLnIViRlhbu3Cx",
+            "administrador": "true",
+            "_id": "02cRUhSr5uRPEihg"
+        },
+        {
+            "nome": "Tate Yundt",
+            "email": "b834fc4eec73@qa.com.br",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "031LwIYTZda80gt0"
+        },
+        {
+            "nome": "Elton",
+            "email": "email3@email.com",
+            "password": "teste",
+            "administrador": "false",
+            "_id": "03KIwwrINUfVKLwZ"
+        },
+        {
+            "nome": "Usuário de Teste",
+            "email": "user1738266715460@testing.com",
+            "password": "teste",
+            "administrador": "false",
+            "_id": "07V5aJVdsWeiXbT7"
+        },
+        {
+            "nome": "Emanuelly Pereira",
+            "email": "Benicio44@gmail.com",
+            "password": "JC7zF4iRQ9SUJUF",
+            "administrador": "false",
+            "_id": "07iUsYlEesZDG3C3"
+        },
+        {
+            "nome": "Alice Nogueira",
+            "email": "Bryan_Costa23@live.com",
+            "password": "d7n9xVhkiXlvYk3",
+            "administrador": "false",
+            "_id": "09d8LZpZMSVpTIDj"
+        },
+        {
+            "password": "teste",
+            "administrador": "true",
+            "nome": "Fulano de Tal",
+            "email": "mentoria@teste.com",
+            "_id": "0CzRZqweHAg1O9WO"
+        },
+        {
+            "nome": "Ígor Batista",
+            "email": "PedroHenrique_Santos@hotmail.com",
+            "password": "2AynCLLj3hwBTdr",
+            "administrador": "false",
+            "_id": "0DPZNxaqXK6YxUOY"
+        },
+        {
+            "nome": "Gerson",
+            "email": "rbvys@teste.com",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "0Dwh7XlugdKM52GS"
+        },
+        {
+            "nome": "Usu�rio de Teste",
+            "email": "kcasa-grande@example.com",
+            "password": " %Y28pSjzQt",
+            "administrador": "true",
+            "_id": "0EleMu3FkNzXZ9ST"
+        },
+        {
+            "nome": "Syble Bednar",
+            "email": "999dc212c981@qa.com.br",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "0FUAoMCEGqfEsScm"
+        },
+        {
+            "nome": "João Silva",
+            "email": "joao.silva1738260949196@teste.com",
+            "password": "senha123",
+            "administrador": "true",
+            "_id": "0GiDMh9WCywKPlvc"
+        },
+        {
+            "nome": "Bruna Braga Jr.",
+            "email": "MariaEduarda68@bol.com.br",
+            "password": "MRnym75pedCmpT2",
+            "administrador": "true",
+            "_id": "0M9uhCUwdNj0U13h"
+        },
+        {
+            "nome": "Anne Effertz-Boehm",
+            "email": "Rosalind.Green17@yahoo.com",
+            "password": "vXcRZlQnsB_M2Ha",
+            "administrador": "false",
+            "_id": "0PpWklpDmhy5SBNz"
+        },
+        {
+            "nome": "Amelia Swift",
+            "email": "Addie.Haley@gmail.com",
+            "password": "n3Pr4XbP6D4nteW",
+            "administrador": "true",
+            "_id": "0PxkYmKfSVRNd81y"
+        },
+        {
+            "nome": "Kobe Wilderman",
+            "email": "Kobe@crawford.biz",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "0RjNtKi36RTv0Yz2"
+        },
+        {
+            "nome": "Tertuliano Saraiva",
+            "email": "Carla28@gmail.com",
+            "password": "91QTiR4WrzxPNNy",
+            "administrador": "true",
+            "_id": "0SZaussZUYTxDE41"
+        },
+        {
+            "nome": "Junior Williamson Ms.",
+            "email": "59a444f4b073@qa.com.br",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "0XVxJRXvSGxlYUsg"
+        },
+        {
+            "nome": "Maria Eduarda Melo",
+            "email": "Deneval.Silva@gmail.com",
+            "password": "DFLx39vFi8OasdY",
+            "administrador": "true",
+            "_id": "0YuHL8QaI2QA5zcc"
+        },
+        {
+            "nome": "Elísio Pereira",
+            "email": "Davi_Pereira@yahoo.com",
+            "password": "jWfnStEr3C5zKKt",
+            "administrador": "false",
+            "_id": "0Z6cVhB0bOgM4rXq"
+        },
+        {
+            "nome": "Maria Helena Batista",
+            "email": "Emanuelly26@yahoo.com",
+            "password": "xhp3lfu12noUiJU",
+            "administrador": "true",
+            "_id": "0bE8u2OlEY8ROgXy"
+        },
+        {
+            "nome": "Ana Paula Liick Admin",
+            "email": "1738237011766@teste.com",
+            "password": "senha123",
+            "administrador": "true",
+            "_id": "0bJRwJvlWRWJl9LJ"
+        },
+        {
+            "nome": "João Silva",
+            "email": "joao.silva1738260949538@teste.com",
+            "password": "senha123",
+            "administrador": "true",
+            "_id": "0bQ8bNYGEH5zGPpa"
+        },
+        {
+            "nome": "Usuário de Teste",
+            "email": "user1738236696896@testing.com",
+            "password": "teste",
+            "administrador": "false",
+            "_id": "0boHvaVugZV1Yn36"
+        },
+        {
+            "nome": "Guilherme Reis",
+            "email": "Gael.Pereira69@gmail.com",
+            "password": "1WAi9EGX8DSECLX",
+            "administrador": "false",
+            "_id": "0cbJgnfqVEn7aDpu"
+        },
+        {
+            "nome": "Deneval Costa",
+            "email": "Helio.Martins16@yahoo.com",
+            "password": "t1hPazwInLpBAYj",
+            "administrador": "true",
+            "_id": "0eo2uI53EeSfuP53"
+        },
+        {
+            "nome": "Meire Carvalho",
+            "email": "Livia.Carvalho53@hotmail.com",
+            "password": "J_FTvDKIbeFVcHs",
+            "administrador": "false",
+            "_id": "0ggVY6EG4fJmWWCw"
+        },
+        {
+            "nome": "Karla Jakubowski",
+            "email": "River.Gutmann@yahoo.com",
+            "password": "xUVi8x6EEtyQcA8",
+            "administrador": "true",
+            "_id": "0himebzJkaf2UfE1"
+        },
+        {
+            "nome": "Alícia Reis",
+            "email": "MariaHelena_Pereira@gmail.com",
+            "password": "sujf0VVlsbrryBe",
+            "administrador": "false",
+            "_id": "0j163ux0ndmcXTcA"
+        },
+        {
+            "nome": "Usuário de Teste",
+            "email": "user1738243683941@testing.com",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "0jQwfDj0f0odAqY5"
+        },
+        {
+            "nome": "Anthony Boyer",
+            "email": "Ulices.Quitzon@hotmail.com",
+            "password": "cguH98bDJufotHN",
+            "administrador": "true",
+            "_id": "0ltkWbsc8OGIh8WL"
+        },
+        {
+            "nome": "Teste Novo Usuário ZawJM",
+            "email": "testenovousuarioZawJM@teste.com",
+            "password": "testenovousuarioZawJM",
+            "administrador": "true",
+            "_id": "0oe7lK5Y5oTiogIF"
+        },
+        {
+            "nome": "Eric Considine",
+            "email": "Precious28@yahoo.com",
+            "password": "NRNj_gArVFuCMjO",
+            "administrador": "true",
+            "_id": "0poiwjU50g62Te1V"
+        },
+        {
+            "nome": "Darryl Price",
+            "email": "Colin.Dietrich71@yahoo.com",
+            "password": "oqvosNq5Rmv5qrq",
+            "administrador": "true",
+            "_id": "0q626TzIYz2rez27"
+        },
+        {
+            "nome": "Dr. Vickie Emmerich",
+            "email": "Giovani39@gmail.com",
+            "password": "xVPQsv877KcRu_f",
+            "administrador": "true",
+            "_id": "0r2QI3B2oMNPfhBs"
+        },
+        {
+            "nome": "Jared Strosin",
+            "email": "faf5e2c75a04@qa.com.br",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "0rG8FNHaiJwFYw6n"
+        },
+        {
+            "nome": "Fulano da Silva",
+            "email": "fulano@qa.com",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "0uxuPY0cbmQhpEz1"
+        },
+        {
+            "nome": "Woodrow Gerhold IV",
+            "email": "Katarina4@hotmail.com",
+            "password": "M3xmGi2UPolt_pB",
+            "administrador": "true",
+            "_id": "0vB4ukXRX52vB22X"
+        },
+        {
+            "nome": "Melinda Stamm-King III",
+            "email": "Jayden.Farrell@hotmail.com",
+            "password": "YMPBo7BznSJUCmg",
+            "administrador": "true",
+            "_id": "0vG6b3NEXQwb7zG3"
+        },
+        {
+            "nome": "Christian Sawayn",
+            "email": "Lavada.Hauck26@hotmail.com",
+            "password": "5jEUn21OwUv0BUN",
+            "administrador": "true",
+            "_id": "0w7EFxvXPdsYcACC"
+        },
+        {
+            "nome": "Ashley Carter",
+            "email": "Shawna.Gulgowski@gmail.com",
+            "password": "k94p4rgc2L6h8XL",
+            "administrador": "false",
+            "_id": "0w7oKCRW4bvjbOMR"
+        },
+        {
+            "nome": "Virginie Schoen",
+            "email": "94be5c8a9a05@qa.com.br",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "0wdcUUJB7TOzhuR4"
+        },
+        {
+            "nome": "Perry Howell",
+            "email": "Kitty.Stamm@yahoo.com",
+            "password": "TdERUjZ9ddw4Al2",
+      ... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2025-01-31T11:38:19.449706" level="INFO">C:\Users\User\Desktop\ProjetosEstudos\robot_api\venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'serverest.dev'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-01-31T11:38:19.450707" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>API</arg>
+<arg>/usuarios</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-01-31T11:38:18.205858" elapsed="1.244849"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-01-31T11:38:19.451707" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-01-31T11:38:19.450707" elapsed="0.001000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-31T11:38:19.451707" elapsed="0.059322"/>
+</kw>
+<doc>Verifica listagem de usuarios</doc>
+<status status="PASS" start="2025-01-31T11:38:18.204827" elapsed="1.307241"/>
+</test>
+<test id="s1-t2" name="Teste de GET - Buscar usuarios por ID" line="15">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-01-31T11:38:19.513573" level="INFO">Creating Session using : alias=API, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>API</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-01-31T11:38:19.513573" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-01-31T11:38:19.884592" level="INFO">GET Request : url=https://serverest.dev/usuarios/y49yS8Oi8ysCQRFA 
+ path_url=/usuarios/y49yS8Oi8ysCQRFA 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-01-31T11:38:19.884592" level="INFO">GET Response : url=https://serverest.dev/usuarios/y49yS8Oi8ysCQRFA 
+ status=200, reason=OK 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'X-Cloud-Trace-Context': '67789ebfde7d13160d9feee802dcab83', 'Date': 'Fri, 31 Jan 2025 14:38:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '178'} 
+ body={
+    "nome": "Spencer Wintheiser V",
+    "email": "Garret.Rutherford0@yahoo.com",
+    "password": "xeb8_mlQfan_wQe",
+    "administrador": "true",
+    "_id": "y49yS8Oi8ysCQRFA"
+} 
+ </msg>
+<msg time="2025-01-31T11:38:19.885593" level="INFO">C:\Users\User\Desktop\ProjetosEstudos\robot_api\venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'serverest.dev'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-01-31T11:38:19.885593" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>API</arg>
+<arg>/usuarios/y49yS8Oi8ysCQRFA</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-01-31T11:38:19.513573" elapsed="0.372020"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-01-31T11:38:19.886592" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-01-31T11:38:19.886592" elapsed="0.001001"/>
+</kw>
+<doc>Verifica listagem de usuarios de acordo com Id informado</doc>
+<status status="PASS" start="2025-01-31T11:38:19.512068" elapsed="0.375525"/>
+</test>
+<test id="s1-t3" name="Teste de GET - Não deve exibir usuários inválidos" line="21">
+<status status="FAIL" start="2025-01-31T11:38:19.888586" elapsed="0.000995">Test cannot be empty.</status>
+</test>
+<test id="s1-t4" name=" [Documentation]" line="22">
+<kw name="Verifica se a API informa que não há usuários quando o usuário não for localizado">
+<msg time="2025-01-31T11:38:19.891583" level="FAIL">No keyword with name 'Verifica se a API informa que não há usuários quando o usuário não for localizado' found.</msg>
+<status status="FAIL" start="2025-01-31T11:38:19.891583" elapsed="0.000000">No keyword with name 'Verifica se a API informa que não há usuários quando o usuário não for localizado' found.</status>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<arg>API</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="NOT RUN" start="2025-01-31T11:38:19.891583" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<var>${response}</var>
+<arg>API</arg>
+<arg>/usuarios/1</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2025-01-31T11:38:19.891583" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-01-31T11:38:19.892579" elapsed="0.000000"/>
+</kw>
+<kw>
+<var>${response_json}</var>
+<var>${response.json()}</var>
+<status status="NOT RUN" start="2025-01-31T11:38:19.892579" elapsed="0.000000"/>
+</kw>
+<kw name="Get From Dictionary">
+<var>${quantidade}</var>
+<arg>${response_json}</arg>
+<arg>quantidade</arg>
+<status status="NOT RUN" start="2025-01-31T11:38:19.892579" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${quantidade}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2025-01-31T11:38:19.892579" elapsed="0.000000"/>
+</kw>
+<kw name="Get From Dictionary">
+<var>${usuarios}</var>
+<arg>${response_json}</arg>
+<arg>usuarios</arg>
+<status status="NOT RUN" start="2025-01-31T11:38:19.892579" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Empty" owner="BuiltIn">
+<arg>${usuarios}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<status status="NOT RUN" start="2025-01-31T11:38:19.893583" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-31T11:38:19.890582" elapsed="0.003001">No keyword with name 'Verifica se a API informa que não há usuários quando o usuário não for localizado' found.</status>
+</test>
+<status status="FAIL" start="2025-01-31T11:38:17.825825" elapsed="2.068758"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="api ServeRest" id="s1" pass="2" fail="2" skip="0">api ServeRest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
