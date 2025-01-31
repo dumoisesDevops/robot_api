@@ -18,9 +18,9 @@ Teste de GET - Buscar usuarios por ID
     Should Be Equal As Strings  ${response.status_code}  200
  
 Teste de GET - Não deve exibir usuários inválidos
- [Documentation]  Verifica se a API informa que não há usuários quando o usuário não for localizado
+    [Documentation]  Verifica se a API informa que não há usuários quando o usuário não for localizado
     Create Session  API  ${BASE_URL}
-    ${response}  GET On Session  API  /usuarios/1
+    ${response}  GET On Session  API  /usuarios?_id=1
     Should Be Equal As Strings  ${response.status_code}  200
     ${response_json}  ${response.json()}
     ${quantidade}  Get From Dictionary  ${response_json}  quantidade

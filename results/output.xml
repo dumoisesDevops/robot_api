@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.12.1 on win32)" generated="2025-01-31T11:38:17.824825" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.12.1 on win32)" generated="2025-01-31T11:45:58.881550" rpa="false" schemaversion="5">
 <suite id="s1" name="api ServeRest" source="C:\Users\User\Desktop\ProjetosEstudos\robot_api\api-tests\tests\api_ServeRest.robot">
 <test id="s1-t1" name="Teste de GET - Buscar usuarios" line="8">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-01-31T11:38:18.204827" level="INFO">Creating Session using : alias=API, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-01-31T11:45:59.241246" level="INFO">Creating Session using : alias=API, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>API</arg>
 <arg>${BASE_URL}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-01-31T11:38:18.204827" elapsed="0.001031"/>
+<status status="PASS" start="2025-01-31T11:45:59.240245" elapsed="0.001001"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-01-31T11:38:19.448705" level="INFO">GET Request : url=https://serverest.dev/usuarios 
+<msg time="2025-01-31T11:46:00.584265" level="INFO">GET Request : url=https://serverest.dev/usuarios 
  path_url=/usuarios 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-01-31T11:38:19.448705" level="INFO">GET Response : url=https://serverest.dev/usuarios 
+<msg time="2025-01-31T11:46:00.584265" level="INFO">GET Response : url=https://serverest.dev/usuarios 
  status=200, reason=OK 
- headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'X-Cloud-Trace-Context': '2a3e9b64e69a25619e416705d7205c1d', 'Date': 'Fri, 31 Jan 2025 14:38:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '624399'} 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'X-Cloud-Trace-Context': 'a2fb22b10459100807731dc945c635f4;o=1', 'Date': 'Fri, 31 Jan 2025 14:45:59 GMT', 'Server': 'Google Frontend', 'Content-Length': '624617'} 
  body={
-    "quantidade": 2803,
+    "quantidade": 2804,
     "usuarios": [
         {
             "nome": "Usuário de Teste",
@@ -335,49 +335,44 @@
             "password": "TdERUjZ9ddw4Al2",
       ... (set the log level to DEBUG or TRACE to see the full content) 
  </msg>
-<msg time="2025-01-31T11:38:19.449706" level="INFO">C:\Users\User\Desktop\ProjetosEstudos\robot_api\venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'serverest.dev'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-01-31T11:46:00.585266" level="INFO">C:\Users\User\Desktop\ProjetosEstudos\robot_api\venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'serverest.dev'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-01-31T11:38:19.450707" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-01-31T11:46:00.585266" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>API</arg>
 <arg>/usuarios</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-01-31T11:38:18.205858" elapsed="1.244849"/>
+<status status="PASS" start="2025-01-31T11:45:59.241246" elapsed="1.344020"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2025-01-31T11:38:19.451707" level="INFO">Argument types are:
+<msg time="2025-01-31T11:46:00.586266" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-01-31T11:38:19.450707" elapsed="0.001000"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response.json()}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-01-31T11:38:19.451707" elapsed="0.059322"/>
+<status status="PASS" start="2025-01-31T11:46:00.585266" elapsed="0.001000"/>
 </kw>
 <doc>Verifica listagem de usuarios</doc>
-<status status="PASS" start="2025-01-31T11:38:18.204827" elapsed="1.307241"/>
+<status status="PASS" start="2025-01-31T11:45:59.239247" elapsed="1.347019"/>
 </test>
-<test id="s1-t2" name="Teste de GET - Buscar usuarios por ID" line="15">
+<test id="s1-t2" name="Teste de GET - Buscar usuarios por ID" line="14">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-01-31T11:38:19.513573" level="INFO">Creating Session using : alias=API, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-01-31T11:46:00.587266" level="INFO">Creating Session using : alias=API, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>API</arg>
 <arg>${BASE_URL}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-01-31T11:38:19.513573" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-31T11:46:00.587266" elapsed="0.000000"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-01-31T11:38:19.884592" level="INFO">GET Request : url=https://serverest.dev/usuarios/y49yS8Oi8ysCQRFA 
+<msg time="2025-01-31T11:46:00.967578" level="INFO">GET Request : url=https://serverest.dev/usuarios/y49yS8Oi8ysCQRFA 
  path_url=/usuarios/y49yS8Oi8ysCQRFA 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-01-31T11:38:19.884592" level="INFO">GET Response : url=https://serverest.dev/usuarios/y49yS8Oi8ysCQRFA 
+<msg time="2025-01-31T11:46:00.967578" level="INFO">GET Response : url=https://serverest.dev/usuarios/y49yS8Oi8ysCQRFA 
  status=200, reason=OK 
- headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'X-Cloud-Trace-Context': '67789ebfde7d13160d9feee802dcab83', 'Date': 'Fri, 31 Jan 2025 14:38:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '178'} 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'X-Cloud-Trace-Context': '5745daa30571cef06940bafae126a662', 'Date': 'Fri, 31 Jan 2025 14:46:00 GMT', 'Server': 'Google Frontend', 'Content-Length': '178'} 
  body={
     "nome": "Spencer Wintheiser V",
     "email": "Garret.Rutherford0@yahoo.com",
@@ -386,96 +381,94 @@
     "_id": "y49yS8Oi8ysCQRFA"
 } 
  </msg>
-<msg time="2025-01-31T11:38:19.885593" level="INFO">C:\Users\User\Desktop\ProjetosEstudos\robot_api\venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'serverest.dev'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-01-31T11:46:00.968582" level="INFO">C:\Users\User\Desktop\ProjetosEstudos\robot_api\venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'serverest.dev'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-01-31T11:38:19.885593" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-01-31T11:46:00.970526" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>API</arg>
 <arg>/usuarios/y49yS8Oi8ysCQRFA</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-01-31T11:38:19.513573" elapsed="0.372020"/>
+<status status="PASS" start="2025-01-31T11:46:00.588270" elapsed="0.382256"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2025-01-31T11:38:19.886592" level="INFO">Argument types are:
+<msg time="2025-01-31T11:46:00.973547" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-01-31T11:38:19.886592" elapsed="0.001001"/>
+<status status="PASS" start="2025-01-31T11:46:00.971536" elapsed="0.002011"/>
 </kw>
 <doc>Verifica listagem de usuarios de acordo com Id informado</doc>
-<status status="PASS" start="2025-01-31T11:38:19.512068" elapsed="0.375525"/>
+<status status="PASS" start="2025-01-31T11:46:00.587266" elapsed="0.387268"/>
 </test>
-<test id="s1-t3" name="Teste de GET - Não deve exibir usuários inválidos" line="21">
-<status status="FAIL" start="2025-01-31T11:38:19.888586" elapsed="0.000995">Test cannot be empty.</status>
-</test>
-<test id="s1-t4" name=" [Documentation]" line="22">
-<kw name="Verifica se a API informa que não há usuários quando o usuário não for localizado">
-<msg time="2025-01-31T11:38:19.891583" level="FAIL">No keyword with name 'Verifica se a API informa que não há usuários quando o usuário não for localizado' found.</msg>
-<status status="FAIL" start="2025-01-31T11:38:19.891583" elapsed="0.000000">No keyword with name 'Verifica se a API informa que não há usuários quando o usuário não for localizado' found.</status>
-</kw>
+<test id="s1-t3" name="Teste de GET - Não deve exibir usuários inválidos" line="20">
 <kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-01-31T11:46:00.979110" level="INFO">Creating Session using : alias=API, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>API</arg>
 <arg>${BASE_URL}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="NOT RUN" start="2025-01-31T11:38:19.891583" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-31T11:46:00.979110" elapsed="0.001037"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-01-31T11:46:00.980147" level="WARN">You might have an = symbol in url. You better place 'url=' before, example: 'url=/your-url/foo?param=a' or use '/your-url/foo  params=param=a' or escape it</msg>
+<msg time="2025-01-31T11:46:00.982137" level="FAIL">TypeError: RequestsOnSessionKeywords.get_on_session() missing 1 required positional argument: 'url'</msg>
 <var>${response}</var>
 <arg>API</arg>
-<arg>/usuarios/1</arg>
+<arg>/usuarios?_id=1</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="NOT RUN" start="2025-01-31T11:38:19.891583" elapsed="0.000000"/>
+<status status="FAIL" start="2025-01-31T11:46:00.980147" elapsed="0.002972">TypeError: RequestsOnSessionKeywords.get_on_session() missing 1 required positional argument: 'url'</status>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="NOT RUN" start="2025-01-31T11:38:19.892579" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-01-31T11:46:00.983119" elapsed="0.000000"/>
 </kw>
 <kw>
 <var>${response_json}</var>
 <var>${response.json()}</var>
-<status status="NOT RUN" start="2025-01-31T11:38:19.892579" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-01-31T11:46:00.983119" elapsed="0.000000"/>
 </kw>
 <kw name="Get From Dictionary">
 <var>${quantidade}</var>
 <arg>${response_json}</arg>
 <arg>quantidade</arg>
-<status status="NOT RUN" start="2025-01-31T11:38:19.892579" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-01-31T11:46:00.983119" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
 <arg>${quantidade}</arg>
 <arg>0</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="NOT RUN" start="2025-01-31T11:38:19.892579" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-01-31T11:46:00.984121" elapsed="0.000000"/>
 </kw>
 <kw name="Get From Dictionary">
 <var>${usuarios}</var>
 <arg>${response_json}</arg>
 <arg>usuarios</arg>
-<status status="NOT RUN" start="2025-01-31T11:38:19.892579" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-01-31T11:46:00.984121" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be Empty" owner="BuiltIn">
 <arg>${usuarios}</arg>
 <doc>Verifies that the given item is empty.</doc>
-<status status="NOT RUN" start="2025-01-31T11:38:19.893583" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-01-31T11:46:00.984121" elapsed="0.000000"/>
 </kw>
-<status status="FAIL" start="2025-01-31T11:38:19.890582" elapsed="0.003001">No keyword with name 'Verifica se a API informa que não há usuários quando o usuário não for localizado' found.</status>
+<doc>Verifica se a API informa que não há usuários quando o usuário não for localizado</doc>
+<status status="FAIL" start="2025-01-31T11:46:00.976535" elapsed="0.007586">TypeError: RequestsOnSessionKeywords.get_on_session() missing 1 required positional argument: 'url'</status>
 </test>
-<status status="FAIL" start="2025-01-31T11:38:17.825825" elapsed="2.068758"/>
+<status status="FAIL" start="2025-01-31T11:45:58.882521" elapsed="2.102599"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="2" skip="0">All Tests</stat>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="api ServeRest" id="s1" pass="2" fail="2" skip="0">api ServeRest</stat>
+<stat name="api ServeRest" id="s1" pass="2" fail="1" skip="0">api ServeRest</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-01-31T11:46:00.980147" level="WARN">You might have an = symbol in url. You better place 'url=' before, example: 'url=/your-url/foo?param=a' or use '/your-url/foo  params=param=a' or escape it</msg>
 </errors>
 </robot>
