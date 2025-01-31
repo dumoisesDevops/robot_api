@@ -41,13 +41,28 @@ pip install robotframework-jsonlibrary
 A estrutura do projeto deve seguir este formato:
 
 ```
-tests/
-|── api_tests.robot  # Arquivo com os testes de API
-|── variables.yaml  # Variáveis reutilizáveis (se necessário)
-|── resources/
-|   ├── api_keywords.robot  # Palavras-chave personalizadas
-|── results/  # Resultados dos testes
-|── requirements.txt  # Dependências
+ROBOT_API/
+│── .github/workflows/
+│   ├── test.yml  # Configuração de CI/CD
+│── api-tests/
+│   ├── resources/
+│   │   ├── api_keywords.robot  # Palavras-chave personalizadas
+│   ├── results/  # Resultados dos testes
+│   ├── tests/  # Arquivos de testes Robot
+│   ├── variables.yaml  # Variáveis reutilizáveis
+│── features/
+│   ├── steps/
+│   │   ├── usuarios_steps.py  # Steps de implementação em Python
+│   ├── usuarios.feature  # Cenários de teste em BDD
+│── results/
+│   ├── log.html  # Log detalhado
+│   ├── output.xml  # Saída dos testes
+│   ├── report.html  # Relatório de execução
+│── venv/  # Ambiente virtual
+│── .gitignore  # Arquivos ignorados no Git
+│── README.md  # Documentação do projeto
+│── requirements.txt  # Dependências do projeto
+│── variables.yaml  # Variáveis globais
 ```
 
 Para salvar todas as dependências instaladas:
@@ -58,29 +73,8 @@ pip freeze > requirements.txt
 
 ---
 
-## 👐 Passo 4: Criar um Teste Simples de API
 
-Crie o arquivo `api_tests.robot` e adicione o seguinte código:
-
-```robot
-*** Settings ***
-Library  RequestsLibrary
-
-*** Variables ***
-${BASE_URL}  https://jsonplaceholder.typicode.com
-
-*** Test Cases ***
-Teste de GET - Buscar Posts
-    [Documentation]  Valida a resposta da API de posts
-    Create Session  API  ${BASE_URL}
-    ${response}  GET On Session  API  /posts/1
-    Should Be Equal As Strings  ${response.status_code}  200
-    Log To Console  ${response.json()}
-```
-
----
-
-## 👐 Passo 5: Executar os Testes
+## 👐 Passo 4: Executar os Testes
 
 Para rodar os testes, execute:
 
@@ -92,7 +86,7 @@ robot -d results tests/api_tests.robot
 
 ---
 
-## 👐 Passo 6: Verificar os Resultados
+## 👐 Passo 5: Verificar os Resultados
 
 Após a execução, os seguintes arquivos serão gerados na pasta `results/`:
 
